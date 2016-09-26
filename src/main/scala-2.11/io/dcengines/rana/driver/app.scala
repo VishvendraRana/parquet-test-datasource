@@ -12,4 +12,6 @@ object app extends App {
 
   val df = spark.sqlContext.read.format("io.dcengines.rana.sql").load("data/")
   df.printSchema()
+
+  df.show()
 }
